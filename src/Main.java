@@ -2,7 +2,7 @@ public class Main {
   public static void main(String[] args) {
     int[] arr = {1, 1, 0, 1, 1, 1};
     int maxConsecutiveOnes = findMaxConsecutiveOnes(arr);
-    System.out.println("Maximum occurrance of one's: " + maxConsecutiveOnes);
+    System.out.println("Maximum occurrences of one's: " + maxConsecutiveOnes);
   }
 
   private static int findMaxConsecutiveOnes(int[] arr) {
