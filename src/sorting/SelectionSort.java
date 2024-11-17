@@ -2,22 +2,27 @@ package sorting;
 
 import java.util.Arrays;
 
+/**
+ * get the minimum and place it to its exact place (using swapping)
+ * first for loop -> select mini
+ * second for loop -> compare mini with each element in the array
+ */
 public class SelectionSort {
   public static void main(String[] args) {
-    int[] arr = {13, 46, 9, 52, 20, 6};
+    int[] arr = {13, 46, 9, 52, 20, 6, 0};
     selectionSort(arr, arr.length);
     System.out.println("After selection sort: " + Arrays.toString(arr));
   }
 
   private static void selectionSort(int[] arr, int n) {
-    for (int i = 0; i <= n - 2; i++) {
-      int min = i;
-      for (int j = i + 1; j <= n - 1; j++) {
-        if (arr[j] < arr[min]) {
-          min = j;
+    for (int i = 0; i < n - 1; i++) {
+      int mini = i;
+      for (int j = i; j < n; j++) {
+        if (arr[j] < arr[mini]) {
+          mini = j;
         }
       }
-      swap(arr, i, min);
+      swap(arr, i, mini);
     }
   }
 
