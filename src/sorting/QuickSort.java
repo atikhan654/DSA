@@ -2,9 +2,16 @@ package sorting;
 
 import java.util.Arrays;
 
+/**
+ * sort an array in ascending/descending order
+ * Time complexity is same as MergeSort i.e O(nlogn) but space complexity will be O(1)
+ * follow:
+ * 1. Pick-up a pivot (first/median/last/random element) and place in its correct place
+ * 2. smaller on the left and larger on the right
+ */
 public class QuickSort {
   public static void main(String[] args) {
-    int[] arr = {4, 1, 7, 9, 3};
+    int[] arr = {4, 1, 4, 7, 9, 3};
     System.out.println("Array before sorting: " + Arrays.toString(arr));
     quickSort(arr, 0, arr.length - 1);
     System.out.println();
@@ -27,9 +34,8 @@ public class QuickSort {
     while (i < j) {
       while (arr[i] <= pivot && i < high) i++;
       while (arr[j] > pivot && j > low) j--;
-      if (i < j) {
+      if (i < j)
         swap(arr, i, j);
-      }
     }
     swap(arr, low, j);
     return j;

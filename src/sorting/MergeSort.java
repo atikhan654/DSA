@@ -3,7 +3,11 @@ package sorting;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+/**
+ * divide and merge
+ * use recursion to achieve merge_sort
+ * TC - O(n logn) and SC - O(n) as it using an extra array
+ */
 public class MergeSort {
   public static void main(String[] args) {
     int[] arr = {13, 46, 9, 52, 20, 6};
